@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     # set args
     args = parser.parse_args()
-    args.distributed = args.world_size > 1
+    args.distributed = args.world_size > 1 # args에 distributed 추가(boolean value, default: False(world_size default:1))
     args = autofill(args)
 
     set_logger(args, log_file=args.log_file, debug_mode=args.debug_mode)
